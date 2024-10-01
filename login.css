@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: blueviolet;
+    background-image: url(KFC-Dental-logo-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 15px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 15px;
+    background: rgb(255 255 255 / 50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header img{
+    width: 35%;
+    margin: 15px 0 0 0;
+}
+
+.form-container{
+    display: block;
+    margin: 15px;
+    height: 300px;
+    width: 70%;
+}
+.form-container form .error-msg{
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+}
+.form-container h1{
+    text-align: center;
+    color: blueviolet;
+    margin-bottom: 25px;
+}
+input{
+    padding: 10px;
+    outline: none;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid blueviolet;
+}
+.password-wrapper {
+    position: relative;
+}
+#password {
+    padding-right: 30px;
+}
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#forgot-pass{
+    float: right;
+    margin: 10px;
+    font-size: 11px;
+}
+#forgot-pass:hover{
+    text-decoration: underline 2px;
+}
+button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+}
+button:hover{
+    background-color: rgb(160, 78, 236);
+}
+.create-acc{
+    text-align: center;
+}
+.create-acc a:hover{
+    text-decoration: underline 2px;
+
+}

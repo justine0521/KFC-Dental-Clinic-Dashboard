@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+    background-color: #f7f7f7;
+}
+.logo img{
+    width: 100%;
+    padding: 20px 50px;
+}
+.container{
+    display: flex;
+}
+.section {
+    /* Set initial margin-left value */
+    margin-left: 0;
+    /* Add transition for smooth animation */
+    transition: margin-left 0.3s ease;
+}
+
+.section.active {
+    margin-left: 0%;
+}
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    background: white;
+    width: 0px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    z-index: 1;
+    width: 200px;
+}
+nav.active {
+    width: 0px;
+    transition: .4s;
+}
+#notifi_number{
+    font-size: 16px;
+}
+#message_notifi_number{
+    font-size: 16px;
+}
+.fa-bell{
+    float: right;
+    color: #7b139b;
+}
+li a{
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 15px;
+    display: table;
+    width: 200px;
+    padding: 10px;
+}
+#logout{
+    position: absolute;
+    bottom: 0;
+    color: rgb(85, 83, 83);
+    font-size: 15px;
+    display: table;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    text-align: justify;
+}
+#logout:hover{
+    background-color: #7b139b;
+    color: white;
+    transition: all 0.6s;
+}
+.fa-solid, .fa-regular{
+    position: relative;
+    width: 30px;
+    height: 5px;
+    font-size: 20px;
+}
+li a:hover{
+    background-color: #7b139b;
+    color: white;
+    transition: 0.5s ease-in;
+}
+.log-out{
+    position: absolute;
+    bottom: 0;
+}
+
+main{
+    width: 100%;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.1);
+}
+.header-wrapper{
+    display: flex;
+    margin-left: 16%;
+}
+.header-wrapper.active{
+    margin-left: 0%;
+    transition: .4s;
+}
+.hamburger-icon{
+    font-size: 25px;
+    cursor: pointer;
+    transition: .4s;
+}
+.hamburger-icon.active{
+    margin-left: 20%;
+    transition: .4s;
+}
+header span p{
+    font-size: 30px;
+}
+.profile{
+    text-align: center;
+    align-items: center;
+}
+.profile:hover{
+    background-color: #7b139b;
+    color: white;
+    transition: .6s;
+    border-radius: 100px;
+}
+#profile-edit:hover, #profile-delete:hover{
+    color: #7b139b;
+}
+.user-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.profile {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 5px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #dcdcdc;
+}
+
+.user-profile:hover .dropdown-content {
+    display: block;
+}
+.edit{
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: justify;
+    cursor: pointer;
+    font-size: 16px;
+}
+.edit:hover{
+    background-color: #dcdcdc;
+    color: #7b139b;
+}
+.container2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cards{
+    width: 280px;
+    background-color: #7b139b;
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+@media (max-width: 580px) {
+    .cards{
+        width: 240px;
+    }
+}
+@media (max-width: 480px){
+    .container2{
+        flex-wrap: wrap;
+    }
+}
+#cardforpatient:hover, #cardformessage:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.cards-wrapper span p{
+    font-size: 30px;
+}
+.icon-wrapper i{
+    font-size: 45px;
+}
+/* td{
+    background-color: rgb(18 245 18);
+} */
+.table-container{
+    padding: 0 5%;
+    margin: 35px auto 0;
+    overflow-x: auto;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table thead{
+    background-color: #7b139b;
+}
+.table thead tr th{
+    font-size: 14px;
+    font-weight: medium;
+    letter-spacing: 0.35px;
+    color: #ffffff;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+}
+.table tbody tr td{
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color: black;
+    /* background-color: white; */
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #dddddd;
+}
+.btn .done, .btn .unattended{
+    width: 80px;
+    text-decoration: none;
+    line-height: 25px;
+    display: inline-block;
+    font-weight: medium;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 14px;
+    opacity: 1;
+    margin: 5px;
+}
+.done{
+    background-color: rgb(43, 218, 43);
+}
+.unattended{
+    background-color: rgb(255, 0, 0);
+}
+.done:hover{
+    background-color: rgb(6, 154, 6);
+    transition: .6s ;
+}
+ .unattended:hover{
+    background-color: rgb(177, 16, 4);
+    transition: .6s ;
+} 
+
+@media (max-width: 768px) {
+    main{
+        width: 100%;
+    }
+    .table thead{
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15px;
+    }
+    .table tbody tr td{
+        text-align: right;
+        position: relative;
+    }
+    .table td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    header{
+        width: 100vw;
+    }
+    aside nav {
+        width: 0;
+    }
+    nav.active {
+        width: 200px;
+    }
+    aside nav.active ul {
+        display: block;
+    }
+}
